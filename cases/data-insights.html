@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EPMS 设备管理系统改版｜王恬心</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../case-gallery.js" defer></script>
+    <script src="../case-diagnostics.js" defer></script>
+  </head>
+  <body class="case-page">
+    <header class="site-header"><a class="wordmark" href="../index.html" aria-label="回到首页"><img class="txin-logo" src="../assets/txin-logo.png" alt="TXIN" /></a><a class="contact-link" href="mailto:18625200129@163.com">联系我 <span>↗</span></a></header>
+    <main class="case-main">
+      <a class="back-link" href="../index.html">← 返回案例列表</a>
+      <p class="case-label">03 / 设备管理 / 2023.02–2023.12</p>
+      <h1>EPMS 设备管理系统改版</h1>
+      <p class="case-lead">面向制造企业的设备管理场景，参与设计覆盖设备、维修、点检、保养、备件、模具及参数管理的 B 端系统。</p>
+      <section class="case-hero diagnostic-v2" aria-label="设备健康诊断监控看板演示">
+        <header class="diagnostic-v2-header"><h2>设备健康诊断监控看板</h2><time>2024-10-25 17:11:30</time></header>
+        <div class="diagnostic-v2-main">
+          <div class="diagnostic-v2-machine">
+            <div class="diagnostic-info-panel"><h3><i class="v2-panel-icon v2-device-icon" aria-hidden="true">⌾</i>设备信息</h3><dl><div><dt>设备名称</dt><dd>0822001</dd></div><div><dt>设备编码</dt><dd>0822001</dd></div><div><dt>设备状态</dt><dd><b>空闲</b></dd></div><div><dt>设备位置</dt><dd>生产 01 车间</dd></div></dl></div>
+            <video class="machine-rotation diagnostic-v2-rotation" muted autoplay loop playsinline poster="../assets/epms/device-rotation-poster.jpg" aria-label="CNC 设备旋转演示"><source src="../assets/epms/device-rotation.mp4" type="video/mp4" /></video>
+            <div class="diagnostic-health-panel"><h3><i class="v2-panel-icon v2-health-icon" aria-hidden="true">⌁</i>健康诊断</h3><p class="health-good">●　X　2.5　设备十分健康</p><p class="health-watch">●　Y　2.5　建议持续观察</p><p class="health-alert">●　Z　2.5　建议停机检查</p></div>
+          </div>
+          <div class="diagnostic-v2-analysis">
+            <section class="diagnostic-analysis-panel"><h3><i></i>震动原始分析</h3><div class="scatter-row" aria-label="震动原始分析"><div class="scatter-panel"><b>X-Y</b><div class="scatter-canvas"><span class="axis-y axis-1000">1000</span><span class="axis-y axis-0">0</span><span class="axis-x axis-x0">0</span><span class="axis-x axis-x5">5</span><span class="axis-x axis-x10">10</span><span class="axis-x axis-x15">15</span><span class="axis-x axis-x20">20</span><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div><div class="scatter-panel"><b>X-Z</b><div class="scatter-canvas alt"><span class="axis-y axis-1000">1000</span><span class="axis-y axis-0">0</span><span class="axis-x axis-x0">0</span><span class="axis-x axis-x5">5</span><span class="axis-x axis-x10">10</span><span class="axis-x axis-x15">15</span><span class="axis-x axis-x20">20</span><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div><div class="scatter-panel"><b>Y-Z</b><div class="scatter-canvas warm"><span class="axis-y axis-1000">1000</span><span class="axis-y axis-0">0</span><span class="axis-x axis-x0">0</span><span class="axis-x axis-x5">5</span><span class="axis-x axis-x10">10</span><span class="axis-x axis-x15">15</span><span class="axis-x axis-x20">20</span><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div></div></section>
+            <section class="diagnostic-analysis-panel diagnostic-trend-panel"><div class="diagnostic-trend-heading"><h3><i></i>震动特征分析</h3><span>X　⌄</span><span>mean　⌄</span></div><svg viewBox="0 0 520 118" aria-hidden="true" preserveAspectRatio="none"><defs><clipPath id="trend-plot-clip" clipPathUnits="userSpaceOnUse"><rect x="28" y="14" width="492" height="90" /></clipPath></defs><path class="grid-line" d="M28 14H520M28 29H520M28 44H520M28 59H520M28 74H520M28 89H520M28 104H520"/><g class="trend-axis"><text x="3" y="16">3</text><text x="3" y="31">2</text><text x="3" y="46">1</text><text x="4" y="61">0</text><text x="0" y="76">-1</text><text x="0" y="91">-2</text><text x="0" y="106">-3</text><text x="28" y="116">00:00</text><text x="106" y="116">02:15</text><text x="184" y="116">04:30</text><text x="262" y="116">06:45</text><text x="340" y="116">09:00</text><text x="418" y="116">11:15</text><text x="485" y="116">13:30</text></g><g class="trend-wave" clip-path="url(#trend-plot-clip)"><animateTransform attributeName="transform" type="translate" from="0 0" to="-492 0" dur="14s" repeatCount="indefinite" calcMode="linear"/><g transform="translate(28 0) scale(.946 1)"><path id="trend-wave-path" class="trend-line" d="M0 70 L12 42 L24 78 L36 51 L48 67 L60 29 L72 74 L84 48 L96 82 L108 58 L120 62 L132 37 L144 69 L156 80 L168 53 L180 65 L192 23 L204 77 L216 54 L228 59 L240 46 L252 85 L264 57 L276 66 L288 31 L300 75 L312 40 L324 60 L336 82 L348 49 L360 68 L372 35 L384 74 L396 57 L408 63 L420 28 L432 81 L444 45 L456 69 L468 53 L480 78 L492 42 L504 61 L520 70"/><ellipse class="anomaly-dot" cx="192" cy="23" rx="4" ry="2.6"/><ellipse class="anomaly-dot delay" cx="420" cy="28" rx="4" ry="2.6"/></g><g transform="translate(520 0) scale(.946 1)"><use href="#trend-wave-path"/><ellipse class="anomaly-dot" cx="192" cy="23" rx="4" ry="2.6"/><ellipse class="anomaly-dot delay" cx="420" cy="28" rx="4" ry="2.6"/></g></g></svg><div class="trend-callout">设备可能出现异常<br /><span>需观察一段时间，建议持续观察设备电机</span></div></section>
+          </div>
+        </div>
+        <section class="diagnostic-model-panel"><h3><i></i>诊断模型</h3><div class="diagnostic-table-wrap"><table><thead><tr><th>序号</th><th>轴向</th><th>不平衡</th><th>轴弯曲</th><th>不对中</th><th>松动</th><th>油膜旋涡</th><th>油膜晃动</th><th>内环损伤</th><th>外环损伤</th><th>滚珠损失</th><th>气息不均</th></tr></thead><tbody><tr><td>1</td><td>X</td><td>287.1</td><td>287.2</td><td>287.3</td><td>287.4</td><td>287.5</td><td>287.6</td><td>287.7</td><td>287.8</td><td>287.9</td><td>288.0</td></tr><tr><td>2</td><td>Y</td><td>288.9</td><td>289.0</td><td>289.1</td><td>289.2</td><td>289.3</td><td>289.4</td><td>289.5</td><td>289.6</td><td>289.7</td><td>289.8</td></tr><tr><td>3</td><td>Z</td><td>290.7</td><td>290.8</td><td>290.9</td><td>291.0</td><td>291.1</td><td>291.2</td><td>291.3</td><td>291.4</td><td>291.5</td><td>291.6</td></tr></tbody></table></div>
+        </section>
+      </section>
+      <section class="case-content"><h2>业务背景</h2><p>设备台账、维护任务与处理记录分散，管理人员难以快速掌握设备状态和维护进度。</p></section>
+      <section class="case-content"><h2>问题与目标</h2><p>梳理设备预防维护流程与信息架构，建立覆盖关键设备管理任务的统一线上系统。</p></section>
+      <section class="case-content"><h2>我的职责</h2><p>参与核心模块的页面结构、原型和交互方案设计，负责设备状态、模具使用与产出明细等数据看板体验。</p></section>
+      <section class="case-content"><h2>关键方案</h2><ul><li>梳理设备预防维护流程与信息架构，明确核心页面结构。</li><li>设计工单流程配置能力，覆盖事件发起、表单配置、处理人、条件分支与历史追溯。</li><li>通过数据看板帮助管理人员快速识别设备状态与维护任务。</li></ul></section>
+      <section class="design-showcase" aria-labelledby="epms-design-title">
+        <div class="showcase-heading">
+          <p class="case-label">DESIGN HIGHLIGHTS</p>
+          <h2 id="epms-design-title">用不同界面承接不同的设备管理任务</h2>
+        </div>
+        <div class="design-tabs" role="tablist" aria-label="EPMS 设计展示">
+          <button class="design-tab is-active" id="epms-tab-workflow" type="button" role="tab" aria-selected="true" aria-controls="epms-design-panel" data-image="../assets/epms/workflow-assignee.jpg" data-images="../assets/epms/workflow-assignee.jpg|../assets/epms/workflow-form.jpg|../assets/epms/workflow-branch.jpg|../assets/epms/workflow-copy.jpg|../assets/epms/workflow-handler.jpg|../assets/epms/workflow-list.jpg" data-alt="流程编辑与处理人配置界面" data-title="可配置的工单处理流程" data-description="从流程总览、节点表单到条件分支、抄送人与处理人配置，完整呈现设备事件从发起到结束的处理逻辑。">流程配置</button>
+          <button class="design-tab" id="epms-tab-dashboard" type="button" role="tab" aria-selected="false" aria-controls="epms-design-panel" tabindex="-1" data-image="../assets/epms/equipment-health-dashboard.jpg" data-alt="设备健康诊断监控看板" data-title="设备健康状态与异常诊断" data-description="整合设备基础信息、振动数据与诊断结果，让管理人员能够快速发现异常并追溯设备状态。">设备状态</button>
+          <button class="design-tab" id="epms-tab-monitoring" type="button" role="tab" aria-selected="false" aria-controls="epms-design-panel" tabindex="-1" data-image="../assets/epms/equipment-monitoring-dashboard.jpg" data-alt="设备状态监控看板与产出明细界面" data-title="实时设备监控与产出明细" data-description="以可视化卡片呈现设备状态，并支持下钻查看产出明细，让异常识别和后续追溯更直接。">监控看板</button>
+        </div>
+        <div class="design-stage" id="epms-design-panel" role="tabpanel" aria-labelledby="epms-tab-workflow">
+          <div class="design-image-frame has-gallery"><div class="workflow-carousel" data-images="../assets/epms/workflow-assignee.jpg|../assets/epms/workflow-form.jpg|../assets/epms/workflow-branch.jpg|../assets/epms/workflow-copy.jpg|../assets/epms/workflow-handler.jpg|../assets/epms/workflow-list.jpg"><button class="workflow-nav workflow-prev" type="button" aria-label="查看上一张流程界面" disabled>‹</button><img class="design-image workflow-image" src="../assets/epms/workflow-assignee.jpg" alt="流程处理人配置" /><button class="workflow-nav workflow-next" type="button" aria-label="查看下一张流程界面">›</button></div></div>
+          <div class="design-copy"><p class="case-label">01 / 流程配置</p><h3>可配置的工单处理流程</h3><p>从流程总览、节点表单到条件分支、抄送人与处理人配置，完整呈现设备事件从发起到结束的处理逻辑。</p></div>
+        </div>
+      </section>
+      <section class="case-content"><h2>成果</h2><p class="case-result">完成 EPMS 核心模块设计并支撑研发交付，帮助客户将设备台账、维护任务和处理记录统一纳入线上管理与追溯流程。</p></section>
+    </main>
+    <footer><span>© 2026 WANG TIANXIN</span><a href="mailto:18625200129@163.com">18625200129@163.com</a></footer>
+  </body>
+</html>
