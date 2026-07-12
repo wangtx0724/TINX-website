@@ -79,6 +79,8 @@ h1 { max-width:780px; font-size:clamp(46px, 6.1vw, 86px); line-height:1.11; lett
 .diagnostic-v2-header h2 { font-size:clamp(11px,2vw,24px); }
 .design-image-frame { overflow:hidden; transition:opacity 180ms ease; }
 .design-image-frame.is-fading { opacity:0; }
+.epms-showcase .design-image-frame { padding:0; }
+.epms-showcase .design-image { object-fit:cover; }
 .workflow-carousel { position:relative; width:100%; height:100%; }
 .workflow-carousel .workflow-image { display:block; width:100%; height:100%; object-fit:contain; }
 .workflow-nav { box-sizing:border-box; display:grid; place-items:center; position:absolute; z-index:2; top:50%; width:38px; height:38px; padding:0; border:1px solid #cfd8e3; border-radius:50%; color:#172235; background:#fffffff0; font-size:0; box-shadow:0 5px 15px #15223524; cursor:pointer; transform:translateY(-50%); transition:opacity 160ms ease,transform 160ms ease; }
