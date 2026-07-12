@@ -89,7 +89,7 @@ h1 { max-width:780px; font-size:clamp(46px, 6.1vw, 86px); line-height:1.11; lett
 .back-link { font-size:15px; }
 #page-title.is-typing span:last-child::after { content:""; display:inline-block; width:.065em; height:.8em; margin-left:.08em; background:currentColor; vertical-align:-.04em; animation:titleCaret .7s steps(1) infinite; }
 @keyframes titleCaret { 50% { opacity:0; } }
-.design-copy { row-gap:16px; }
+.design-copy { row-gap:8px; }
 .back-link { animation:backLinkHint 1.15s ease-in-out .7s 2; transition:transform 180ms ease,color 180ms ease; }
 .back-link:hover,.back-link:focus-visible { color:var(--ink); outline:none; transform:translateX(-4px); }
 @keyframes backLinkHint { 0%,100% { transform:translateX(0); } 38% { transform:translateX(-4px); } 68% { transform:translateX(1px); } }
