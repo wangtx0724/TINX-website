@@ -95,11 +95,12 @@ document.querySelectorAll('.darl-gallery').forEach((gallery) => {
     count.textContent = String(index + 1).padStart(2, '0');
   };
   const move = (direction) => {
-    index += direction;
+    const nextIndex = index + direction;
+    index = nextIndex;
     image.classList.add('is-fading');
     window.setTimeout(() => {
-      image.src = sources[index];
-      image.alt = `DARL 工业元宇宙界面 ${index + 1}`;
+      image.src = sources[nextIndex];
+      image.alt = `DARL 工业元宇宙界面 ${nextIndex + 1}`;
       image.classList.remove('is-fading');
     }, 150);
     update();
