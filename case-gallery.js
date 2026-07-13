@@ -21,11 +21,12 @@ document.querySelectorAll('.design-showcase').forEach((showcase) => {
       next.disabled = index === sources.length - 1;
     };
     const move = (direction) => {
-      index += direction;
+      const nextIndex = index + direction;
+      index = nextIndex;
       image.classList.add('is-fading');
       window.setTimeout(() => {
-        image.src = sources[index];
-        image.alt = `${alt} ${index + 1}`;
+        image.src = sources[nextIndex];
+        image.alt = `${alt} ${nextIndex + 1}`;
         image.classList.remove('is-fading');
       }, 120);
       updateButtons();
