@@ -5,6 +5,7 @@ document.querySelectorAll('.design-showcase').forEach((showcase) => {
   const title = showcase.querySelector('.design-copy h3');
   const description = showcase.querySelector('.design-copy > p:not(.case-label)');
   const label = showcase.querySelector('.design-copy .case-label');
+  const points = showcase.querySelector('.design-points');
 
   const wireCarousel = (carousel) => {
     if (!carousel) return;
@@ -13,6 +14,7 @@ document.querySelectorAll('.design-showcase').forEach((showcase) => {
     const image = carousel.querySelector('.workflow-image');
     const previous = carousel.querySelector('.workflow-prev');
     const next = carousel.querySelector('.workflow-next');
+    const alt = carousel.dataset.alt;
     let index = 0;
     const updateButtons = () => {
       previous.disabled = index === 0;
@@ -23,7 +25,7 @@ document.querySelectorAll('.design-showcase').forEach((showcase) => {
       image.classList.add('is-fading');
       window.setTimeout(() => {
         image.src = sources[index];
-        image.alt = `流程配置界面 ${index + 1}`;
+        image.alt = `${alt} ${index + 1}`;
         image.classList.remove('is-fading');
       }, 120);
       updateButtons();
@@ -39,9 +41,10 @@ document.querySelectorAll('.design-showcase').forEach((showcase) => {
 
     imageFrame.classList.add('is-fading');
     window.setTimeout(() => {
+      imageFrame.dataset.fit = tab.dataset.fit || 'contain';
       imageFrame.classList.toggle('has-gallery', sources.length > 1);
       imageFrame.innerHTML = sources.length > 1
-        ? `<div class="workflow-carousel" data-images="${sources.join('|')}"><button class="workflow-nav workflow-prev" type="button" aria-label="查看上一张${tab.textContent}界面" disabled>‹</button><img class="design-image workflow-image" src="${sources[0]}" alt="${tab.dataset.alt} 1" /><button class="workflow-nav workflow-next" type="button" aria-label="查看下一张${tab.textContent}界面">›</button></div>`
+        ? `<div class="workflow-carousel" data-images="${sources.join('|')}" data-alt="${tab.dataset.alt}"><button class="workflow-nav workflow-prev" type="button" aria-label="查看上一张${tab.textContent}界面" disabled>‹</button><img class="design-image workflow-image" src="${sources[0]}" alt="${tab.dataset.alt} 1" /><button class="workflow-nav workflow-next" type="button" aria-label="查看下一张${tab.textContent}界面">›</button></div>`
         : `<img class="design-image" src="${sources[0]}" alt="${tab.dataset.alt}" />`;
       wireCarousel(imageFrame.querySelector('.workflow-carousel'));
       imageFrame.classList.remove('is-fading');
@@ -62,7 +65,14 @@ document.querySelectorAll('.design-showcase').forEach((showcase) => {
     window.setTimeout(() => {
       title.textContent = tab.dataset.title;
       description.textContent = tab.dataset.description;
-      label.textContent = `0${tabs.indexOf(tab) + 1} / ${tab.textContent}`;
+      label.textContent = tab.dataset.index;
+      if (points) {
+        points.replaceChildren(...tab.dataset.points.split('|').map((point) => {
+          const item = document.createElement('li');
+          item.textContent = point;
+          return item;
+        }));
+      }
       panel.setAttribute('aria-labelledby', tab.id);
     }, 140);
   };
