@@ -111,3 +111,12 @@ document.querySelectorAll('.darl-gallery').forEach((gallery) => {
   next.addEventListener('click', () => move(1));
   update();
 });
+
+document.querySelectorAll('.diagnostic-v2').forEach((dashboard) => {
+  const updateScale = () => {
+    dashboard.style.setProperty('--diagnostic-scale', dashboard.clientWidth / 938);
+  };
+
+  new ResizeObserver(updateScale).observe(dashboard);
+  updateScale();
+});
